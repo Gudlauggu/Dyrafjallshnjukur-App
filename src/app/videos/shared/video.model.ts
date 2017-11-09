@@ -4,4 +4,6 @@ export class Video {
   id?: number;
   videoName: string;
   genres: Genre[];
+  year: string;
+  available: boolean;
 }
