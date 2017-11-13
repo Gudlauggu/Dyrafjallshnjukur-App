@@ -1,21 +1,53 @@
-<button
-  class="btn btn-outline-primary"
-  routerLink="/videos"
-  routerLinkActive="active">Back
-</button>
-<div class="video-detail">
-  <img class="img" src = "http://via.placeholder.com/128x128">
-  <h2>Id: {{video?.id}}</h2>
-  <h3>Name: {{video?.videoName}}</h3>
-  <h3>Year: {{video?.year}}</h3>
-  <h3>Available: {{video?.available}}</h3>
-  <h6>Genre: {{video?.genre.name}}</h6>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+      <button
+        class="btn btn-outline-primary"
+        routerLink="/videos"
+        routerLinkActive="active">Back
+      </button>
+      <hr>
+    </div>
+    <div class="col-md-12">
+      <div class="card">
+        <h4 class="card-header">Video Details</h4>
+        <div class="card-body row">
+          <div class="col-md-4">
+            <img class="img" src="http://via.placeholder.com/250x250">
+          </div>
+          <div class="col-md-8">
+            <dl class="row">
+              <dt class="col-md-2">Video: </dt>
+              <dd class="col-md-10">{{video?.videoName}}</dd>
+            </dl>
+            <dl class="row">
+              <dt class="col-md-2">Genre: </dt>
+              <dd class="col-md-10">{{video?.genre.name}}</dd>
+            </dl>
+            <dl class="row">
+              <dt class="col-md-2">Year: </dt>
+              <dd class="col-md-10">{{video?.year}}</dd>
+            </dl>
+            <dl class="row">
+              <dt class="col-md-2">Available: </dt>
+              <dd class="col-md-10">{{video?.available}}
+              </dd>
+            </dl>
+         </div>
+        </div>
+        <div class="card-footer bg-transparent ">
+          <div class="pull-right">
+            <button class="btn btn-outline-warning">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Update
+            </button>
+            <button class="btn btn-outline-danger" (click)="delete()">
+              <i class="fa fa-trash-o" aria-hidden="true"></i> Delete
+            </button>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
-<hr>
-<pre>Selected time: {{time | json}}</pre>
-
-{{video?.genre | json}}
-
-
