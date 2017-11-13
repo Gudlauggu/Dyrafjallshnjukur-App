@@ -12,6 +12,7 @@ import 'rxjs/add/operator/switchMap';
 export class VideoDetailComponent implements OnInit {
 
   video: Video;
+  time = {hour: 13, minute: 30};
   constructor(private videoService: VideoService,
               private router: Router,
               private route: ActivatedRoute) { }
