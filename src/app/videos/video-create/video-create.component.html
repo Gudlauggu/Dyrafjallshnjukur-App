@@ -11,6 +11,23 @@
          Create Video
       </h4>
       <hr>
+      <div class="col-md-12">
+        <form (ngSubmit)="save()" [formGroup]="videoGroup" novalidate>
+          <div class="form-group">
+            <label class="center-block">Name:
+              <input class="form-control" formControlName="name">
+            </label>
+            <button
+              type="submit"
+              class="btn btn-outline-primary">
+              <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+            </button>
+
+          </div>
+        </form>
+        {{videoGroup.value | json}}
+        {{videoGroup.status | json}}
+      </div>
     </div>
   </div>
 </div>

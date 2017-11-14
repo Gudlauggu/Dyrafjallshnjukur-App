@@ -36,4 +36,7 @@ export class VideoDetailComponent implements OnInit {
       .subscribe(video => this.router
         .navigateByUrl('videos'));
   }
+  back() {
+    this.router.navigateByUrl('/videos');
+  }
 }
