@@ -22,7 +22,7 @@ export class VideoService {
       .get<Video>(url + '/' + id);
   }
 
-  delete(id: number): Observable<Video>{
+  delete(id: number): Observable<Video> {
     return this.http
       .delete<Video>(url + '/' + id);
   }

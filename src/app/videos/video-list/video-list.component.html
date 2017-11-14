@@ -1,5 +1,18 @@
-<h1>Videos</h1>
-<app-video
-  (click) = "details(vid)"
-  *ngFor="let vid of videos"
-  [video]="vid"></app-video>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <hr>
+      <h2>Videos</h2>
+      <hr>
+    </div>
+    <div class="col-md-12">
+      <div class="list-group">
+        <a (click)="details(video)" *ngFor="let video of videos" class="list-group-item list-group-item-action">
+          <img class="img" src="http://via.placeholder.com/90x90">
+          <h5>{{video.videoName}}</h5>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
